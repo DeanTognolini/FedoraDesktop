@@ -24,7 +24,7 @@ do
 done
 
 # Install packages
-dnf install sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit fontawesome-fonts fontawesome-fonts-web vim lxappearance unzip firefox arandr neofetch alsa-utils copyq terminator -y
+dnf install sddm bspwm sxhkd rofi polybar picom thunar nitrogen lxpolkit fontawesome-fonts fontawesome-fonts-web vim lxappearance unzip firefox arandr neofetch alsa-utils copyq terminator -y
 
 # Install custom ocs-url package
 dnf install ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm -y
