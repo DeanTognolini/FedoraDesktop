@@ -24,7 +24,7 @@ do
 done
 
 # Install packages
-dnf install sddm bspwm sxhkd rofi polybar picom thunar lxpolkit fontawesome-fonts fontawesome-fonts-web vim lxappearance unzip firefox neofetch alsa-utils copyq terminator flameshot -y
+dnf install sddm bspwm sxhkd rofi polybar picom thunar lxpolkit fontawesome-fonts fontawesome-fonts-web vim lxappearance unzip firefox neofetch alsa-utils copyq terminator flameshot nitrogen -y
 
 # Install fonts
 unzip FiraCode.zip -d /usr/share/fonts
