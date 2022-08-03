@@ -14,7 +14,7 @@ sudo /bin/bash <<EOF
 # Configure RPM Fusion repos
 dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
-# Install proprietary NVIDIA driver
+# Install proprietary NVIDIA driver - comment out if not needed
 dnf update -y
 dnf install akmod-nvidia -y
 until modinfo -F version nvidia | grep -m 1 -q -v "ERROR";
@@ -24,10 +24,7 @@ do
 done
 
 # Install packages
-dnf install sddm bspwm sxhkd rofi polybar picom thunar nitrogen lxpolkit fontawesome-fonts fontawesome-fonts-web vim lxappearance unzip firefox arandr neofetch alsa-utils copyq terminator -y
-
-# Install custom ocs-url package
-dnf install ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm -y
+dnf install sddm bspwm sxhkd rofi polybar picom thunar lxpolkit fontawesome-fonts fontawesome-fonts-web vim lxappearance unzip firefox neofetch alsa-utils copyq terminator flameshot -y
 
 # Install fonts
 unzip FiraCode.zip -d /usr/share/fonts
@@ -46,7 +43,7 @@ mkdir ~/.config
 chown $(whoami): ~/.config
 mv ./dotconfig/* ~/.config
 mv ./bg.jpg ~/.config
-mv xinitrc ~/.xinitrc
-mv Xnord ~/.Xnord
-mv xprofile ~/.xprofile
-mv Xresources ~/.Xresources
+mv ./xfiles/xinitrc ~/.xinitrc
+mv ./xfiles/Xnord ~/.Xnord
+mv ./xfiles/xprofile ~/.xprofile
+mv ./xfiles/Xresources ~/.Xresources
